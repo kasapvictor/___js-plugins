@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>JS Clock by Kasap Victor</title>
+	<link rel="stylesheet" href="./style.css">
+</head>
+<body class="body">
+
+<div class="wrap">
+	<div class="analog">
+		<div class="analog__inner">
+			<div class="ring">
+				<div class="analog__center lazy"></div>
+				<div class="analog__hour lazy">
+					<div class="analog__arrow analog__hours-arrow"></div>
+				</div>
+				<div class="analog__minutes lazy">
+					<div class="analog__arrow analog__minutes-arrow"></div>
+				</div>
+				<div class="analog__seconds lazy">
+					<div class="analog__arrow analog__seconds-arrow"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="digit">
+		<div class="digit__inner">
+			<div class="digit__time">
+				<span class="digit__font digit__hours">00</span>
+				<div class="digit__font digit_delimiter">:</div>
+				<span class="digit__font digit__minutes">00</span>
+				<div class="digit__font digit_delimiter">:</div>
+				<span class="digit__font digit__seconds">00</span>
+			</div>
+			<div class="digit__desc lazy">
+				<span class="digit__desc-text digit__full-date">-</span>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="./scripts.js"></script>
+</body>
+</html>

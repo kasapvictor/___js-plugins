@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Spoiler</title>
+</head>
+
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-size: 18px;
+		line-height: 1.5;
+		color: #333;
+	}
+
+	html, body {
+		height: 100%;
+	}
+
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 60px 30px;
+	}
+
+	/* spoiler trigger */
+	.spoiler {
+		padding-bottom: 30px;
+	}
+
+	.spoiler__trigger {
+		padding: 20px;
+		background-color: #eee;
+		border: 1px solid #ccc;
+		border-radius: 6px;
+		cursor: pointer;
+	}
+
+	.spoiler__trigger:hover {
+		background-color: #dfdfdf;
+	}
+
+	/* spoiler content */
+	.spoiler__content {
+		margin-top: 20px;
+		height: 0;
+		overflow: hidden;
+		transition: all 0.3s ease-in-out 0s;
+	}
+
+	.spoiler__content-inner {
+		padding: 20px 30px;
+		background-color: #dfdfdf;
+		border-radius: 6px;
+	}
+</style>
+<body>
+
+<main class="main">
+	<div class="container">
+		<h2>Spoilers 1</h2>
+		<div class="spoilers myspoilers1">
+			<!-- spoiler -->
+			<div class="spoiler" data-spoiler>
+				<!-- spoiler trigger -->
+				<div class="spoiler__trigger" data-spoiler-trigger>
+					<div class="spoiler__trigger-inner">
+						<div class="spoiler__trigger-name">Spoiler theme</div>
+					</div>
+				</div><!-- // spoiler__trigger -->
+
+				<!-- spoiler content -->
+				<div class="spoiler__content" data-spoiler-content>
+					<div class="spoiler__content-inner">
+						<h2 class="spoiler__title">Spoiler 1</h2>
+						<div class="spoiler__text">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus animi at deserunt fugit id molestiae nemo nostrum provident? Beatae, expedita.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, consectetur, quibusdam. Ab ad cum dolorem ducimus eius harum iste, molestiae nihil odit omnis placeat qui rem, sint totam, ullam voluptas.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto dicta enim eos, et eum fugit harum in ipsa iure minima molestias nesciunt nobis odio officia officiis quasi qui rem repellendus soluta suscipit tempore tenetur voluptatibus. Incidunt iusto modi vel voluptate?</p>
+						</div>
+					</div>
+				</div><!-- // spoiler__content -->
+			</div>
+
+			<!-- spoiler -->
+			<div class="spoiler" data-spoiler="open">
+				<!-- spoiler trigger -->
+				<div class="spoiler__trigger" data-spoiler-trigger>
+					<div class="spoiler__trigger-inner">
+						<div class="spoiler__trigger-name">Spoiler theme</div>
+					</div>
+				</div><!-- // spoiler__trigger -->
+
+				<!-- spoiler content -->
+				<div class="spoiler__content" data-spoiler-content>
+					<div class="spoiler__content-inner">
+						<h2 class="spoiler__title">Spoiler 1</h2>
+						<div class="spoiler__text">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus animi at deserunt fugit id molestiae nemo nostrum provident? Beatae, expedita.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, consectetur, quibusdam. Ab ad cum dolorem ducimus eius harum iste, molestiae nihil odit omnis placeat qui rem, sint totam, ullam voluptas.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto dicta enim eos, et eum fugit harum in ipsa iure minima molestias nesciunt nobis odio officia officiis quasi qui rem repellendus soluta suscipit tempore tenetur voluptatibus. Incidunt iusto modi vel voluptate?</p>
+						</div>
+					</div>
+				</div><!-- // spoiler__content -->
+			</div>
+
+			<!-- spoiler -->
+			<div class="spoiler" data-spoiler>
+				<!-- spoiler trigger -->
+				<div class="spoiler__trigger" data-spoiler-trigger>
+					<div class="spoiler__trigger-inner">
+						<div class="spoiler__trigger-name">Spoiler theme</div>
+					</div>
+				</div><!-- // spoiler__trigger -->
+
+				<!-- spoiler content -->
+				<div class="spoiler__content" data-spoiler-content>
+					<div class="spoiler__content-inner">
+						<h2 class="spoiler__title">Spoiler 1</h2>
+						<div class="spoiler__text">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus animi at deserunt fugit id molestiae nemo nostrum provident? Beatae, expedita.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, consectetur, quibusdam. Ab ad cum dolorem ducimus eius harum iste, molestiae nihil odit omnis placeat qui rem, sint totam, ullam voluptas.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto dicta enim eos, et eum fugit harum in ipsa iure minima molestias nesciunt nobis odio officia officiis quasi qui rem repellendus soluta suscipit tempore tenetur voluptatibus. Incidunt iusto modi vel voluptate?</p>
+						</div>
+					</div>
+				</div><!-- // spoiler__content -->
+			</div>
+		</div>
+
+		<br>
+
+		<h2>Spoilers 2</h2>
+		<div class="spoilers myspoilers2">
+			<!-- spoiler -->
+			<div class="spoiler" data-spoiler>
+				<!-- spoiler trigger -->
+				<div class="spoiler__trigger" data-spoiler-trigger>
+					<div class="spoiler__trigger-inner">
+						<div class="spoiler__trigger-name">Spoiler theme</div>
+					</div>
+				</div><!-- // spoiler__trigger -->
+
+				<!-- spoiler content -->
+				<div class="spoiler__content" data-spoiler-content>
+					<div class="spoiler__content-inner">
+						<h2 class="spoiler__title">Spoiler 1</h2>
+						<div class="spoiler__text">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus animi at deserunt fugit id molestiae nemo nostrum provident? Beatae, expedita.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, consectetur, quibusdam. Ab ad cum dolorem ducimus eius harum iste, molestiae nihil odit omnis placeat qui rem, sint totam, ullam voluptas.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto dicta enim eos, et eum fugit harum in ipsa iure minima molestias nesciunt nobis odio officia officiis quasi qui rem repellendus soluta suscipit tempore tenetur voluptatibus. Incidunt iusto modi vel voluptate?</p>
+						</div>
+					</div>
+				</div><!-- // spoiler__content -->
+			</div>
+
+			<!-- spoiler -->
+			<div class="spoiler" data-spoiler>
+				<!-- spoiler trigger -->
+				<div class="spoiler__trigger" data-spoiler-trigger>
+					<div class="spoiler__trigger-inner">
+						<div class="spoiler__trigger-name">Spoiler theme</div>
+					</div>
+				</div><!-- // spoiler__trigger -->
+
+				<!-- spoiler content -->
+				<div class="spoiler__content" data-spoiler-content>
+					<div class="spoiler__content-inner">
+						<h2 class="spoiler__title">Spoiler 1</h2>
+						<div class="spoiler__text">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus animi at deserunt fugit id molestiae nemo nostrum provident? Beatae, expedita.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, consectetur, quibusdam. Ab ad cum dolorem ducimus eius harum iste, molestiae nihil odit omnis placeat qui rem, sint totam, ullam voluptas.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto dicta enim eos, et eum fugit harum in ipsa iure minima molestias nesciunt nobis odio officia officiis quasi qui rem repellendus soluta suscipit tempore tenetur voluptatibus. Incidunt iusto modi vel voluptate?</p>
+						</div>
+					</div>
+				</div><!-- // spoiler__content -->
+			</div>
+
+			<!-- spoiler -->
+			<div class="spoiler" data-spoiler>
+				<!-- spoiler trigger -->
+				<div class="spoiler__trigger" data-spoiler-trigger>
+					<div class="spoiler__trigger-inner">
+						<div class="spoiler__trigger-name">Spoiler theme</div>
+					</div>
+				</div><!-- // spoiler__trigger -->
+
+				<!-- spoiler content -->
+				<div class="spoiler__content" data-spoiler-content>
+					<div class="spoiler__content-inner">
+						<h2 class="spoiler__title">Spoiler 1</h2>
+						<div class="spoiler__text">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus animi at deserunt fugit id molestiae nemo nostrum provident? Beatae, expedita.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, consectetur, quibusdam. Ab ad cum dolorem ducimus eius harum iste, molestiae nihil odit omnis placeat qui rem, sint totam, ullam voluptas.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto dicta enim eos, et eum fugit harum in ipsa iure minima molestias nesciunt nobis odio officia officiis quasi qui rem repellendus soluta suscipit tempore tenetur voluptatibus. Incidunt iusto modi vel voluptate?</p>
+						</div>
+					</div>
+				</div><!-- // spoiler__content -->
+			</div>
+		</div>
+	</div>
+</main>
+
+<script src="./spoiler.js"></script>
+</body>
+</html>
