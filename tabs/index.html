@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Tabs</title>
+</head>
+
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-size: 18px;
+		line-height: 1.5;
+		color: #333;
+	}
+
+	html, body {
+		height: 100%;
+	}
+
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 60px 30px;
+	}
+
+	/* tabs */
+
+	/* tabs menu */
+	.tabs__menu {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		margin-bottom: 30px;
+	}
+
+	.tabs__menu-item {
+		padding: 10px 20px;
+		margin-right: 10px;
+		border: 1px solid #ccc;
+		border-radius: 8px;
+		cursor: pointer;
+		transition: all .3s ease-in-out;
+	}
+
+	.tabs__menu-item:hover,
+	.tabs__menu-item.active {
+		background-color: #eee;
+	}
+
+	/* tabs content */
+	.tabs__content {
+		min-height: 200px;
+		position: relative;
+		border: 1px solid #ccc;
+		border-radius: 8px;
+		overflow: hidden;
+	}
+
+	.tabs__content-item__inner {
+		padding: 20px 30px;
+	}
+
+	.tabs__content-item {
+		height: 0;
+		position: relative;
+		opacity: 0;
+		overflow: hidden;
+		z-index: -10;
+		transition: all .5s ease-in-out;
+	}
+
+	.tabs__content-item.active {
+		height: auto;
+		opacity: 1;
+		z-index: -10;
+	}
+
+</style>
+<body>
+
+<main class="main">
+	<div class="container">
+
+		<div class="tabs mytabs1">
+			<!-- tabs menu -->
+			<div class="tabs__menu" data-tabs-menus>
+				<div class="tabs__menu-item" data-tab-item="1">Tab #1</div>
+				<div class="tabs__menu-item" data-tab-item="2">Tab #2</div>
+				<div class="tabs__menu-item" data-tab-item="3">Tab #3</div>
+				<div class="tabs__menu-item" data-tab-item="4">Tab #4</div>
+			</div>
+
+			<!-- tabs content -->
+			<div class="tabs__content" data-tabs-contents>
+				<!-- item -->
+				<div class="tabs__content-item" data-tab-item="1">
+					<div class="tabs__content-item__inner">
+						<h2>Tab #1 title</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, nisi.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet magnam neque ratione. Dolores enim laboriosam minima officia? Enim sunt, suscipit.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore ipsum labore laborum sequi sit. Dolorum labore omnis perspiciatis provident quibusdam sapiente sed veritatis. Exercitationem obcaecati rem voluptate! Eligendi incidunt, sunt.</p>
+					</div>
+				</div>
+				<!-- item -->
+				<div class="tabs__content-item" data-tab-item="2">
+					<div class="tabs__content-item__inner">
+						<h2>Tab #2 title</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, nisi.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet magnam neque ratione. Dolores enim laboriosam minima officia? Enim sunt, suscipit.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore ipsum labore laborum sequi sit. Dolorum labore omnis perspiciatis provident quibusdam sapiente sed veritatis. Exercitationem obcaecati rem voluptate! Eligendi incidunt, sunt.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore ipsum labore laborum sequi sit. Dolorum labore omnis perspiciatis provident quibusdam sapiente sed veritatis. Exercitationem obcaecati rem voluptate! Eligendi incidunt, sunt.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore ipsum labore laborum sequi sit. Dolorum labore omnis perspiciatis provident quibusdam sapiente sed veritatis. Exercitationem obcaecati rem voluptate! Eligendi incidunt, sunt.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore ipsum labore laborum sequi sit. Dolorum labore omnis perspiciatis provident quibusdam sapiente sed veritatis. Exercitationem obcaecati rem voluptate! Eligendi incidunt, sunt.</p>
+					</div>
+				</div>
+				<!-- item -->
+				<div class="tabs__content-item" data-tab-item="3">
+					<div class="tabs__content-item__inner">
+						<h2>Tab #3 title</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, nisi.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet magnam neque ratione. Dolores enim laboriosam minima officia? Enim sunt, suscipit.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore ipsum labore laborum sequi sit. Dolorum labore omnis perspiciatis provident quibusdam sapiente sed veritatis. Exercitationem obcaecati rem voluptate! Eligendi incidunt, sunt.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, nisi.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet magnam neque ratione. Dolores enim laboriosam minima officia? Enim sunt, suscipit.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore ipsum labore laborum sequi sit. Dolorum labore omnis perspiciatis provident quibusdam sapiente sed veritatis. Exercitationem obcaecati rem voluptate! Eligendi incidunt, sunt.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore ipsum labore laborum sequi sit. Dolorum labore omnis perspiciatis provident quibusdam sapiente sed veritatis. Exercitationem obcaecati rem voluptate! Eligendi incidunt, sunt.</p>
+					</div>
+				</div>
+				<!-- item -->
+				<div class="tabs__content-item" data-tab-item="4">
+					<div class="tabs__content-item__inner">
+						<h2>Tab #4 title</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, nisi.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<br>
+
+		<div class="tabs mytabs2">
+			<!-- tabs menu -->
+			<div class="tabs__menu" data-tabs-menus>
+				<div class="tabs__menu-item" data-tab-item="1">Tab #1</div>
+				<div class="tabs__menu-item" data-tab-item="2">Tab #2</div>
+				<div class="tabs__menu-item" data-tab-item="3">Tab #3</div>
+				<div class="tabs__menu-item" data-tab-item="4">Tab #4</div>
+			</div>
+
+			<!-- tabs content -->
+			<div class="tabs__content" data-tabs-contents>
+				<!-- item -->
+				<div class="tabs__content-item" data-tab-item="1">
+					<div class="tabs__content-item__inner">
+						<h2>Tab #1 title</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, nisi.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet magnam neque ratione. Dolores enim laboriosam minima officia? Enim sunt, suscipit.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore ipsum labore laborum sequi sit. Dolorum labore omnis perspiciatis provident quibusdam sapiente sed veritatis. Exercitationem obcaecati rem voluptate! Eligendi incidunt, sunt.</p>
+					</div>
+				</div>
+				<!-- item -->
+				<div class="tabs__content-item" data-tab-item="2">
+					<div class="tabs__content-item__inner">
+						<h2>Tab #2 title</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, nisi.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet magnam neque ratione. Dolores enim laboriosam minima officia? Enim sunt, suscipit.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore ipsum labore laborum sequi sit. Dolorum labore omnis perspiciatis provident quibusdam sapiente sed veritatis. Exercitationem obcaecati rem voluptate! Eligendi incidunt, sunt.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore ipsum labore laborum sequi sit. Dolorum labore omnis perspiciatis provident quibusdam sapiente sed veritatis. Exercitationem obcaecati rem voluptate! Eligendi incidunt, sunt.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore ipsum labore laborum sequi sit. Dolorum labore omnis perspiciatis provident quibusdam sapiente sed veritatis. Exercitationem obcaecati rem voluptate! Eligendi incidunt, sunt.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore ipsum labore laborum sequi sit. Dolorum labore omnis perspiciatis provident quibusdam sapiente sed veritatis. Exercitationem obcaecati rem voluptate! Eligendi incidunt, sunt.</p>
+					</div>
+				</div>
+				<!-- item -->
+				<div class="tabs__content-item" data-tab-item="3">
+					<div class="tabs__content-item__inner">
+						<h2>Tab #3 title</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, nisi.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet magnam neque ratione. Dolores enim laboriosam minima officia? Enim sunt, suscipit.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore ipsum labore laborum sequi sit. Dolorum labore omnis perspiciatis provident quibusdam sapiente sed veritatis. Exercitationem obcaecati rem voluptate! Eligendi incidunt, sunt.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, nisi.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet magnam neque ratione. Dolores enim laboriosam minima officia? Enim sunt, suscipit.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore ipsum labore laborum sequi sit. Dolorum labore omnis perspiciatis provident quibusdam sapiente sed veritatis. Exercitationem obcaecati rem voluptate! Eligendi incidunt, sunt.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore ipsum labore laborum sequi sit. Dolorum labore omnis perspiciatis provident quibusdam sapiente sed veritatis. Exercitationem obcaecati rem voluptate! Eligendi incidunt, sunt.</p>
+					</div>
+				</div>
+				<!-- item -->
+				<div class="tabs__content-item" data-tab-item="4">
+					<div class="tabs__content-item__inner">
+						<h2>Tab #4 title</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, nisi.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</main>
+
+<script src="./tabs.js"></script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Modal</title>
+</head>
+
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-size: 18px;
+		line-height: 1.5;
+		color: #333;
+		outline: none;
+	}
+
+	html, body {
+		height: 100%;
+	}
+
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 60px 30px;
+	}
+
+	.button {
+		padding: 10px 20px;
+		background: none;
+		border: 1px solid #ccc;
+		cursor: pointer;
+	}
+
+	button:hover {
+		background-color: #eee;
+	}
+
+	button:active {
+		background-color: #f8f8f8;
+	}
+
+	/* MODAL */
+	.modal {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		visibility: hidden;
+		opacity: 0;
+		transition: all .5s ease-in-out;
+		z-index: -10;
+	}
+
+	.modal.active {
+		visibility: visible;
+		opacity: 1;
+		z-index: 999999;
+	}
+
+	.modal__container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		max-width: 780px;
+		margin: 0 auto;
+		padding: 20px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 20;
+	}
+
+	.modal__content {
+		padding: 30px;
+		position: relative;
+		background-color: #fff;
+		border-radius: 10px;
+	}
+
+	.modal__close {
+		position: absolute;
+		cursor: pointer;
+		top: -20px;
+		right: -20px;
+		background-color: #fff;
+		border: 2px solid tomato;
+		border-radius: 8px;
+	}
+
+	.modal__bg {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: rgba(0, 0, 0, 0.5);
+		border: none;
+		z-index: 10;
+	}
+
+	.s {
+		height: 100vh;
+	}
+
+	.s__1 {
+		background-color: #eee;
+	}
+
+	.s__2 {
+		background-color: #555;
+	}
+
+	.s__3 {
+		background-color: #333;
+	}
+
+</style>
+<body>
+
+<main class="main">
+	<div class="container">
+
+		<button class="button" data-modal-target="modal1">modal 1</button>
+		<button class="button" data-modal-target="modal2">modal 2</button>
+
+	</div>
+
+	<section class="s s__1"></section>
+	<section class="s s__2"></section>
+	<section class="s s__3"></section>
+</main>
+
+<div class="modal" data-modal="modal1">
+	<div class="modal__container">
+		<div class="modal__content">
+			<h2>Modal 1</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, quam?</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, quam?</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, quam?</p>
+			<button class="button modal__close" data-modal-close>close</button>
+		</div>
+	</div>
+	<div class="modal__bg modal__close" data-modal-close></div>
+</div>
+
+<div class="modal" data-modal="modal2">
+	<div class="modal__container">
+		<div class="modal__content">
+			<h2>Modal 2</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, quam?</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, quam?</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, quam?</p>
+			<button class="button modal__close" data-modal-close>close</button>
+		</div>
+	</div>
+	<div class="modal__bg modal__close" data-modal-close></div>
+</div>
+
+<script src="./modal.js"></script>
+</body>
+</html>
