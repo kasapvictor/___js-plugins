@@ -9,10 +9,12 @@ $(document).ready(function() {
         depth: 0.75,
         wheelZoom: false,
         reverse: true,
-        shuffleTags: true, 
+        shuffleTags: true,
         initial: [0.05,0.05],
         splitWidth: 180,
-        centreImage: 'logo.png'
+        centreImage: 'logo.png',
+        height: 100,
+        width: 100
     }, 'tags')) {
         // TagCanvas failed to load
         $('#myCanvasContainer').hide();
