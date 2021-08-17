@@ -13,8 +13,8 @@ $(document).ready(function() {
         initial: [0.05,0.05],
         splitWidth: 180,
         centreImage: 'logo.png',
-        height: 100,
-        width: 100
+        // height: 100,
+        // width: 100
     }, 'tags')) {
         // TagCanvas failed to load
         $('#myCanvasContainer').hide();
